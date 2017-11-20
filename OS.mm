@@ -1174,7 +1174,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1511177411397" ID="ID_441871557" MODIFIED="1511177418228" POSITION="right" TEXT="Chapter 4: Threads">
+<node COLOR="#0033ff" CREATED="1511177411397" ID="ID_441871557" MODIFIED="1511216934193" POSITION="right" TEXT="Chapter 4: Threads">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <node COLOR="#00b439" CREATED="1511177519371" ID="ID_455093297" MODIFIED="1511182220503" TEXT="Definition">
@@ -1271,6 +1271,9 @@
 <node COLOR="#111111" CREATED="1511193769990" ID="ID_596664242" MODIFIED="1511193783601" TEXT="the kernel schedules another thread"/>
 </node>
 </node>
+<node COLOR="#111111" CREATED="1511216947487" ID="ID_1914705722" MODIFIED="1511216953508" TEXT="Two level model">
+<node COLOR="#111111" CREATED="1511216954593" ID="ID_557474881" MODIFIED="1511216989265" TEXT="its like Many to many, but allows a user thread to be bound with one kernel thread(like one to one)"/>
+</node>
 </node>
 </node>
 </node>
@@ -1333,6 +1336,13 @@
 <node COLOR="#00b439" CREATED="1511177952154" ID="ID_452704978" MODIFIED="1511177954119" TEXT="Libraries">
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1511217111732" ID="ID_1032837607" MODIFIED="1511217117352" TEXT="Approaches">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1511217117980" ID="ID_822170494" MODIFIED="1511217151353" TEXT="entirely in user space with no kernel support"/>
+<node COLOR="#111111" CREATED="1511217187259" ID="ID_1675272643" MODIFIED="1511217206629" TEXT="creating a library in kernel mode supported by OS">
+<node COLOR="#111111" CREATED="1511217208556" ID="ID_1348579712" MODIFIED="1511217260541" TEXT="invoking a function in this runs a system call"/>
+</node>
+</node>
 <node COLOR="#990000" CREATED="1511182243924" ID="ID_1823439076" MODIFIED="1511182246597" TEXT="pthreads">
 <font NAME="SansSerif" SIZE="14"/>
 </node>
