@@ -3,7 +3,7 @@
 <node COLOR="#000000" CREATED="1511079733250" ID="ID_987983254" MODIFIED="1511092456076" STYLE="bubble" TEXT="OS">
 <font NAME="SansSerif" SIZE="20"/>
 <hook NAME="accessories/plugins/AutomaticLayout.properties"/>
-<node COLOR="#0033ff" CREATED="1511079823778" FOLDED="true" ID="ID_1246885421" MODIFIED="1511129825505" POSITION="right" STYLE="bubble" TEXT="Chapter 1: Intro and terminalogies">
+<node COLOR="#0033ff" CREATED="1511079823778" FOLDED="true" ID="ID_1246885421" MODIFIED="1511183052704" POSITION="right" STYLE="bubble" TEXT="Chapter 1: Intro and terminalogies">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <node COLOR="#00b439" CREATED="1511101726255" ID="ID_1779688073" MODIFIED="1511101733530" TEXT="Definitions">
@@ -476,7 +476,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1511092461916" FOLDED="true" ID="ID_714419721" MODIFIED="1511174933568" POSITION="right" TEXT="Chapter 2: OS Structures">
+<node COLOR="#0033ff" CREATED="1511092461916" FOLDED="true" ID="ID_714419721" MODIFIED="1511183054781" POSITION="right" TEXT="Chapter 2: OS Structures">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <node COLOR="#00b439" CREATED="1511100041444" ID="ID_63451536" MODIFIED="1511100046151" TEXT="OS Services">
@@ -842,7 +842,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1511130445761" ID="ID_1067461448" MODIFIED="1511130457235" POSITION="right" TEXT="Chapter 3: Processes">
+<node COLOR="#0033ff" CREATED="1511130445761" FOLDED="true" ID="ID_1067461448" MODIFIED="1511183057623" POSITION="right" TEXT="Chapter 3: Processes">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <node COLOR="#00b439" CREATED="1511130464315" ID="ID_1331901292" MODIFIED="1511130478795" TEXT="Intro">
@@ -1171,6 +1171,332 @@
 <node COLOR="#111111" CREATED="1511175581102" ID="ID_1227748135" MODIFIED="1511175595839" TEXT="in UNIX, its a file, can be opened, written into, and read from."/>
 </node>
 </node>
+</node>
+</node>
+</node>
+<node COLOR="#0033ff" CREATED="1511177411397" ID="ID_441871557" MODIFIED="1511177418228" POSITION="right" TEXT="Chapter 4: Threads">
+<edge STYLE="sharp_bezier" WIDTH="8"/>
+<font NAME="SansSerif" SIZE="18"/>
+<node COLOR="#00b439" CREATED="1511177519371" ID="ID_455093297" MODIFIED="1511182220503" TEXT="Definition">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1511178409436" ID="ID_1128973756" MODIFIED="1511178413665" TEXT="difference with process">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1511180398707" ID="ID_738813611" MODIFIED="1511180410851" TEXT="thread does not have resources for itself without a process"/>
+</node>
+<node COLOR="#990000" CREATED="1511178414407" ID="ID_1643364000" MODIFIED="1511178436355" TEXT="signle thread process(Heavy weight process)">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1511180357368" ID="ID_1179619337" MODIFIED="1511180363067" TEXT="Thread specific data">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1511180364850" ID="ID_1734173319" MODIFIED="1511180416784" TEXT="Thread id"/>
+<node COLOR="#111111" CREATED="1511180417229" ID="ID_1442031390" MODIFIED="1511180422298" TEXT="program counter"/>
+<node COLOR="#111111" CREATED="1511180422858" ID="ID_72605151" MODIFIED="1511180424791" TEXT="stack"/>
+<node COLOR="#111111" CREATED="1511180426701" ID="ID_960772071" MODIFIED="1511180429491" TEXT="register set"/>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1511177791137" ID="ID_1528936976" MODIFIED="1511182303858" TEXT="multi-threaded programming">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<icon BUILTIN="messagebox_warning"/>
+<node COLOR="#990000" CREATED="1511177872996" ID="ID_1339254753" MODIFIED="1511182324750" TEXT="benefits">
+<font NAME="SansSerif" SIZE="14"/>
+<icon BUILTIN="yes"/>
+<node COLOR="#111111" CREATED="1511180516380" ID="ID_250485258" MODIFIED="1511180875846" TEXT="Responsiveness">
+<node COLOR="#111111" CREATED="1511180911850" ID="ID_1186785686" MODIFIED="1511180919714" TEXT="when a thread blocks, others continue"/>
+<node COLOR="#111111" CREATED="1511180931591" ID="ID_877858052" MODIFIED="1511180942286" TEXT="like loading an image while downloading it"/>
+</node>
+<node COLOR="#111111" CREATED="1511180889040" ID="ID_1382302667" MODIFIED="1511180895495" TEXT="Resource sharing">
+<node COLOR="#111111" CREATED="1511180943669" ID="ID_1061731647" MODIFIED="1511180974377" TEXT="threads share memory and resourses of the process(code and data)"/>
+</node>
+<node COLOR="#111111" CREATED="1511180895733" ID="ID_1437805379" MODIFIED="1511180899544" TEXT="Economic">
+<node COLOR="#111111" CREATED="1511180976140" ID="ID_692043951" MODIFIED="1511180997731" TEXT="faster than creating processes and context switch between them">
+<node COLOR="#111111" CREATED="1511181305726" ID="ID_1763760572" MODIFIED="1511181312055" TEXT="threads use shared mem"/>
+<node COLOR="#111111" CREATED="1511181312512" ID="ID_1309828561" MODIFIED="1511181324540" TEXT="thread creation is faster than process creation"/>
+</node>
+<node COLOR="#111111" CREATED="1511180998706" ID="ID_1747176522" MODIFIED="1511181020826" TEXT="more efficient use of resources"/>
+</node>
+<node COLOR="#111111" CREATED="1511180899860" ID="ID_534042682" MODIFIED="1511181177915" TEXT="Scalability">
+<node COLOR="#111111" CREATED="1511181194784" ID="ID_244156099" MODIFIED="1511181202926" TEXT="multiprocessor utilization">
+<node COLOR="#111111" CREATED="1511181203830" ID="ID_1019854311" MODIFIED="1511181229053" TEXT="threads run in parallel on different cores"/>
+</node>
+</node>
+</node>
+<node COLOR="#990000" CREATED="1511177987466" ID="ID_51690855" MODIFIED="1511212551297" TEXT="Two Level">
+<font NAME="SansSerif" SIZE="14"/>
+<icon BUILTIN="yes"/>
+<node COLOR="#111111" CREATED="1511178010567" ID="ID_1133231907" MODIFIED="1511178012151" TEXT="User level">
+<node COLOR="#111111" CREATED="1511183014138" ID="ID_1309005544" MODIFIED="1511188979777" TEXT="supported above the OS"/>
+<node COLOR="#111111" CREATED="1511210919776" ID="ID_1401078250" MODIFIED="1511210927690" TEXT="faster to create and manage"/>
+<node COLOR="#111111" CREATED="1511210927996" ID="ID_1246026102" MODIFIED="1511210948204" TEXT="implementation by thread library at user level"/>
+<node COLOR="#111111" CREATED="1511210954440" ID="ID_910266395" MODIFIED="1511210977005" TEXT="user level thread is generic and can run on any OS"/>
+<node COLOR="#111111" CREATED="1511210986642" ID="ID_769694605" MODIFIED="1511211016810" TEXT="multithreaded apps cant take advantage of mutliprocessing(needs kernel threads)"/>
+</node>
+<node COLOR="#111111" CREATED="1511178007408" ID="ID_843153892" MODIFIED="1511188995960" TEXT="Kernel Level">
+<node COLOR="#111111" CREATED="1511183006441" ID="ID_1255733041" MODIFIED="1511188993065" TEXT="supported and managed by OS"/>
+<node COLOR="#111111" CREATED="1511211021397" ID="ID_67379791" MODIFIED="1511211025535" TEXT="slower to create and manage"/>
+<node COLOR="#111111" CREATED="1511211028784" ID="ID_345831544" MODIFIED="1511211037477" TEXT="OS supports creation of these"/>
+<node COLOR="#111111" CREATED="1511211042166" ID="ID_64276247" MODIFIED="1511211044562" TEXT="OS specific"/>
+<node COLOR="#111111" CREATED="1511211057636" ID="ID_1162903971" MODIFIED="1511211077876" TEXT="kernel routines can be multithreaded too"/>
+</node>
+<node COLOR="#111111" CREATED="1511189128729" ID="ID_1250043758" MODIFIED="1511189140595" TEXT="a relationship must exist between user and kernel threads">
+<node COLOR="#111111" CREATED="1511177943655" ID="ID_923584441" MODIFIED="1511212582683" TEXT="Models">
+<font NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="yes"/>
+<node COLOR="#111111" CREATED="1511177968767" ID="ID_1709831162" MODIFIED="1511189181862" TEXT="Many to One">
+<node COLOR="#111111" CREATED="1511192903331" ID="ID_161325251" MODIFIED="1511192913419" TEXT="many user threads to one kernel thread"/>
+<node COLOR="#111111" CREATED="1511192913702" ID="ID_630826371" MODIFIED="1511193182021" TEXT="multiple threads can not run in parallel"/>
+<node COLOR="#111111" CREATED="1511193306242" ID="ID_1399715614" MODIFIED="1511193319875" TEXT="only one thread can access the kernel at a time"/>
+<node COLOR="#111111" CREATED="1511193184132" ID="ID_357580392" MODIFIED="1511193257663" TEXT="threads are managed in user mode, so its efficient"/>
+<node COLOR="#111111" CREATED="1511193265122" ID="ID_1145073378" MODIFIED="1511193542183" TEXT="if one thread makes a blocking system call, the whole system must wait"/>
+<node COLOR="#111111" CREATED="1511193410371" ID="ID_1074053372" MODIFIED="1511193436161" TEXT="because it cant use multi-core processing, its not used anymore"/>
+<node COLOR="#111111" CREATED="1511193436518" ID="ID_610315587" MODIFIED="1511193446751" TEXT="Green threads in Solaris"/>
+</node>
+<node COLOR="#111111" CREATED="1511177972263" ID="ID_1819363918" MODIFIED="1511189181015" TEXT="One to One">
+<node COLOR="#111111" CREATED="1511193499921" ID="ID_1819598210" MODIFIED="1511193502669" TEXT="more concurrent">
+<node COLOR="#111111" CREATED="1511193503141" ID="ID_1669440723" MODIFIED="1511193532054" TEXT="becuase other threads can run when one thread makes a blocking system call"/>
+</node>
+<node COLOR="#111111" CREATED="1511193552326" ID="ID_1624932801" MODIFIED="1511193565817" TEXT="allows multiple threads to run in parallel on different cores"/>
+<node COLOR="#111111" CREATED="1511193582178" ID="ID_1512696609" MODIFIED="1511193597214" TEXT="creating a user thread requires creating a kernel thread -&gt; overhead">
+<node COLOR="#111111" CREATED="1511193608139" ID="ID_1251021594" MODIFIED="1511193616228" TEXT="so number of threads is restricted"/>
+</node>
+<node COLOR="#111111" CREATED="1511193627758" ID="ID_881239938" MODIFIED="1511193630714" TEXT="linux and windows"/>
+</node>
+<node COLOR="#111111" CREATED="1511177978789" ID="ID_1695109065" MODIFIED="1511189179927" TEXT="Many to Many">
+<node COLOR="#111111" CREATED="1511193632642" ID="ID_1492245931" MODIFIED="1511193646633" TEXT="many user threads to many kernel threads"/>
+<node COLOR="#111111" CREATED="1511193652529" ID="ID_201879127" MODIFIED="1511193663831" TEXT="kernel threads &lt;= user threads"/>
+<node COLOR="#111111" CREATED="1511193676889" ID="ID_1305796327" MODIFIED="1511193686304" TEXT="number of kernel threads is applicaton specific"/>
+<node COLOR="#111111" CREATED="1511193727306" ID="ID_864073307" MODIFIED="1511193733587" TEXT="kernel threads can run in parallel"/>
+<node COLOR="#111111" CREATED="1511193741055" ID="ID_651877649" MODIFIED="1511193764595" TEXT="when a user threads runs a blocking system call, one kernel thread is blocked">
+<node COLOR="#111111" CREATED="1511193769990" ID="ID_596664242" MODIFIED="1511193783601" TEXT="the kernel schedules another thread"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#990000" CREATED="1511180482251" ID="ID_1383751942" MODIFIED="1511180484218" TEXT="examples">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1511180485299" ID="ID_899832555" MODIFIED="1511180487688" TEXT="Web server"/>
+<node COLOR="#111111" CREATED="1511180487957" ID="ID_457032194" MODIFIED="1511180490561" TEXT="RPC server"/>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1511177881702" ID="ID_712306015" MODIFIED="1511177886542" TEXT="mutli-core programming">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1511177894008" ID="ID_96336810" MODIFIED="1511177905945" TEXT="Amdahl&apos;s law">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1511181480868" ID="ID_1164330959" MODIFIED="1511181514220" TEXT="S: part of program that has to be done serially"/>
+<node COLOR="#111111" CREATED="1511181504909" ID="ID_716501951" MODIFIED="1511181511713" TEXT="N: number of cores"/>
+<node COLOR="#111111" CREATED="1511181519348" ID="ID_109607570" MODIFIED="1511181548258" TEXT="Speedup &lt;= 1/[s + (1-s)/n]"/>
+</node>
+<node COLOR="#990000" CREATED="1511177906705" ID="ID_284356817" MODIFIED="1511177909986" TEXT="challenges">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1511181672325" ID="ID_1362782092" MODIFIED="1511181683087" TEXT="Identifying tasks">
+<node COLOR="#111111" CREATED="1511181698975" ID="ID_1242225884" MODIFIED="1511181720950" TEXT="finding tasks that can be separated into threads"/>
+</node>
+<node COLOR="#111111" CREATED="1511181657636" ID="ID_1072941490" MODIFIED="1511181671342" TEXT="Balance">
+<node COLOR="#111111" CREATED="1511181721859" ID="ID_730686159" MODIFIED="1511181747301" TEXT="loads of tasks must be balanced so that we use threads efficiently"/>
+</node>
+<node COLOR="#111111" CREATED="1511181650863" ID="ID_745998198" MODIFIED="1511181683893" TEXT="Data Splitting">
+<node COLOR="#111111" CREATED="1511181768588" ID="ID_23986381" MODIFIED="1511181809904" TEXT="data accessed and manipulated by tasks should be devided to run on separate cores"/>
+</node>
+<node COLOR="#111111" CREATED="1511181686857" ID="ID_1640408597" MODIFIED="1511181691618" TEXT="Data dependency">
+<node COLOR="#111111" CREATED="1511181821502" ID="ID_934247975" MODIFIED="1511181848474" TEXT="when a task needs data from another, the programmer must ensure that tasks run synchronized"/>
+</node>
+<node COLOR="#111111" CREATED="1511181693771" ID="ID_1285996463" MODIFIED="1511181697371" TEXT="Testing and Debugging">
+<node COLOR="#111111" CREATED="1511181877624" ID="ID_1255210215" MODIFIED="1511181906187" TEXT="because of parallel running on different cores, different execution pathes are possible, so testing and debugging is hard"/>
+</node>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1511177916967" ID="ID_607903037" MODIFIED="1511183291662" TEXT="Parallelism">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1511177925086" ID="ID_1753098186" MODIFIED="1511177931764" TEXT="Data Parallelism">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1511181979877" ID="ID_79535070" MODIFIED="1511182009245" TEXT="dividing a big computation process into threads, so that each thread does a part of it"/>
+<node COLOR="#111111" CREATED="1511182054821" ID="ID_1527801590" MODIFIED="1511182066034" TEXT="each thread does the same operation on a portion of data"/>
+<node COLOR="#111111" CREATED="1511182009510" ID="ID_744682483" MODIFIED="1511182040590" TEXT="example: summation of an array of size 100 is given to 10 different threads and one thread to compile and sum the results from other threads"/>
+</node>
+<node COLOR="#990000" CREATED="1511177932067" ID="ID_920933202" MODIFIED="1511177935577" TEXT="Task Parallelism">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1511182141777" ID="ID_603507104" MODIFIED="1511182151509" TEXT="assigning different tasks to each thread"/>
+<node COLOR="#111111" CREATED="1511182151739" ID="ID_670609323" MODIFIED="1511182162515" TEXT="each thread does a unique operation"/>
+</node>
+<node COLOR="#990000" CREATED="1511182168826" ID="ID_1648857888" MODIFIED="1511182991787" TEXT="hybrid">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1511182172546" ID="ID_1542714422" MODIFIED="1511182991788" TEXT="commonly applications use both">
+<font NAME="SansSerif" SIZE="12"/>
+</node>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1511177952154" ID="ID_452704978" MODIFIED="1511177954119" TEXT="Libraries">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1511182243924" ID="ID_1823439076" MODIFIED="1511182246597" TEXT="pthreads">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1511182246863" ID="ID_977722962" MODIFIED="1511182250956" TEXT="Win32 threads">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1511182251297" ID="ID_901598231" MODIFIED="1511182253527" TEXT="Java threads">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1511178000993" ID="ID_1218942995" MODIFIED="1511212530561" TEXT="Implicit Threading">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<icon BUILTIN="messagebox_warning"/>
+<node COLOR="#990000" CREATED="1511212070279" ID="ID_1102272399" MODIFIED="1511212148266" TEXT="Transfer creating and managing threads from application developers to comilers and runtime libraries">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1511212152600" ID="ID_993513296" MODIFIED="1511212170380" TEXT="Thread pool">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1511212362115" ID="ID_82202641" MODIFIED="1511212382440" TEXT="create a number of threads at startup"/>
+<node COLOR="#111111" CREATED="1511212387792" ID="ID_179552317" MODIFIED="1511212412638" TEXT="place them into a pool where they wait for work"/>
+<node COLOR="#111111" CREATED="1511212479890" ID="ID_613029367" MODIFIED="1511212506617" TEXT="whenever server receives request, a thread is awaken(if available)"/>
+<node COLOR="#111111" CREATED="1511212524471" ID="ID_1868404370" MODIFIED="1511212526888" TEXT="Benefits">
+<node COLOR="#111111" CREATED="1511212598176" ID="ID_386267248" MODIFIED="1511212616299" TEXT="servicing a request with existing thread is faster than creating"/>
+<node COLOR="#111111" CREATED="1511212619429" ID="ID_272764025" MODIFIED="1511212630139" TEXT="limits the number of threads running concurrently"/>
+<node COLOR="#111111" CREATED="1511212686818" ID="ID_1670618610" MODIFIED="1511212723346" TEXT="separating the task to be performed from the creation of the task allows using different strategies">
+<node COLOR="#111111" CREATED="1511212724482" ID="ID_329396860" MODIFIED="1511212754632" TEXT="for example executing the task with some delay"/>
+</node>
+</node>
+<node COLOR="#111111" CREATED="1511212417824" ID="ID_917412757" MODIFIED="1511212469882" TEXT="to ensure we won&apos;t have unlimited threads running concurrently"/>
+<node COLOR="#111111" CREATED="1511212776987" ID="ID_462435588" MODIFIED="1511212790975" TEXT="dynamic or static choosing number of threads in pool"/>
+</node>
+<node COLOR="#990000" CREATED="1511212191655" ID="ID_1159546970" MODIFIED="1511212193953" TEXT="OpenMP">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1511212982956" ID="ID_99837395" MODIFIED="1511213027813" TEXT="a set of compiler directives that support parallel programming in shared mem environments"/>
+<node COLOR="#111111" CREATED="1511213050587" ID="ID_1815630226" MODIFIED="1511213102285" TEXT="parallel regions">
+<node COLOR="#111111" CREATED="1511213103296" ID="ID_1125170816" MODIFIED="1511213115601" TEXT="blocks of code that may run in parallel"/>
+</node>
+<node COLOR="#111111" CREATED="1511213127902" ID="ID_836402685" MODIFIED="1511213144632" TEXT="app developers insert compiler directives at parallel regions"/>
+<node COLOR="#111111" CREATED="1511213155652" ID="ID_698827713" MODIFIED="1511213166969" TEXT="openMP executes these blocks in parallel"/>
+<node COLOR="#111111" CREATED="1511213194064" ID="ID_1134944788" MODIFIED="1511213200365" TEXT="#pragma omp parallel"/>
+</node>
+<node COLOR="#990000" CREATED="1511212194537" ID="ID_23132194" MODIFIED="1511212214418" TEXT="GCD(Grand Central Dispatch)">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1511213312192" ID="ID_1857608321" MODIFIED="1511213325275" TEXT="for Apple"/>
+<node COLOR="#111111" CREATED="1511213376755" ID="ID_708156270" MODIFIED="1511213381742" TEXT="identifies blocks">
+<node COLOR="#111111" CREATED="1511213388795" ID="ID_1298481744" MODIFIED="1511213400950" TEXT="^{block of code}"/>
+</node>
+<node COLOR="#111111" CREATED="1511213408597" ID="ID_550065168" MODIFIED="1511213416940" TEXT="places blocks in scheduling queue"/>
+<node COLOR="#111111" CREATED="1511213426147" ID="ID_1261169400" MODIFIED="1511213435040" TEXT="assigns the block to a thread from thread pool"/>
+<node COLOR="#111111" CREATED="1511213438966" ID="ID_1323070644" MODIFIED="1511213461411" TEXT="Dispatch Queue Types">
+<node COLOR="#111111" CREATED="1511213464214" ID="ID_1586749453" MODIFIED="1511213465705" TEXT="serial">
+<node COLOR="#111111" CREATED="1511213474439" ID="ID_1781359137" MODIFIED="1511213475599" TEXT="FIFO"/>
+<node COLOR="#111111" CREATED="1511213485018" ID="ID_1579762103" MODIFIED="1511213505678" TEXT="only on block removed at a time"/>
+<node COLOR="#111111" CREATED="1511213530150" ID="ID_190366255" MODIFIED="1511213552409" TEXT="once a block removed from queue, it must complete execution"/>
+<node COLOR="#111111" CREATED="1511213563236" ID="ID_1616730010" MODIFIED="1511213568398" TEXT="sequential processing"/>
+</node>
+<node COLOR="#111111" CREATED="1511213465939" ID="ID_330274521" MODIFIED="1511213468442" TEXT="concurrent">
+<node COLOR="#111111" CREATED="1511213516336" ID="ID_204664098" MODIFIED="1511213518521" TEXT="FIFO"/>
+<node COLOR="#111111" CREATED="1511213508217" ID="ID_136297116" MODIFIED="1511213516108" TEXT="several blocks removed at a time"/>
+<node COLOR="#111111" CREATED="1511213588530" ID="ID_132711021" MODIFIED="1511213589978" TEXT="async"/>
+<node COLOR="#111111" CREATED="1511213590922" ID="ID_1507324632" MODIFIED="1511213614346" TEXT="blocks can have priorities"/>
+</node>
+</node>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1511178020517" ID="ID_916157254" MODIFIED="1511215130950" TEXT="Issues">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<icon BUILTIN="messagebox_warning"/>
+<node COLOR="#990000" CREATED="1511214083991" ID="ID_1237362500" MODIFIED="1511214170622" TEXT="exec()">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1511214141778" ID="ID_1109291590" MODIFIED="1511214168288" TEXT="replaces the whole process containing all threads with the program in the exec() parameter"/>
+</node>
+<node COLOR="#990000" CREATED="1511214080659" ID="ID_749334233" MODIFIED="1511214083787" TEXT="fork()">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1511214087851" ID="ID_1640668679" MODIFIED="1511214118709" TEXT="duplicates all the threads if exec() is not called immediately after fork"/>
+<node COLOR="#111111" CREATED="1511214119496" ID="ID_1235190812" MODIFIED="1511214140741" TEXT="otherwise only duplicates the current thread"/>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1511178030451" ID="ID_1574031509" MODIFIED="1511178034676" TEXT="Thread cancellation">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1511178042620" ID="ID_458597957" MODIFIED="1511178049096" TEXT="Async">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1511214220779" ID="ID_1688053508" MODIFIED="1511214244786" TEXT="One thread immediately cancels the target thread"/>
+<node COLOR="#111111" CREATED="1511214248250" ID="ID_1741481675" MODIFIED="1511214252250" TEXT="problems">
+<node COLOR="#111111" CREATED="1511214253150" ID="ID_1530129968" MODIFIED="1511214265807" TEXT="if resources are allocated to cancelled thread"/>
+<node COLOR="#111111" CREATED="1511214266694" ID="ID_708210531" MODIFIED="1511214273988" TEXT="thread is updating some data">
+<node COLOR="#111111" CREATED="1511215884456" ID="ID_342916718" MODIFIED="1511215890625" TEXT="has locked the data or file"/>
+</node>
+</node>
+</node>
+<node COLOR="#990000" CREATED="1511178049406" ID="ID_1601477387" MODIFIED="1511215121519" TEXT="Deferred">
+<font NAME="SansSerif" SIZE="14"/>
+<icon BUILTIN="messagebox_warning"/>
+<node COLOR="#111111" CREATED="1511214287500" ID="ID_1402051" MODIFIED="1511214303847" TEXT="target thread periodically checks if needs to be terminated"/>
+<node COLOR="#111111" CREATED="1511214304177" ID="ID_1640444500" MODIFIED="1511214315420" TEXT="safe cancellation in cancellation points"/>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1511178060700" ID="ID_697215335" MODIFIED="1511215117818" TEXT="Signals">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<icon BUILTIN="messagebox_warning"/>
+<node COLOR="#990000" CREATED="1511214833770" ID="ID_155759739" MODIFIED="1511214853280" TEXT="signals are used to inform processes about events">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1511178068931" ID="ID_1338779849" MODIFIED="1511178097583" TEXT="Sync Signal">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1511214912140" ID="ID_434238647" MODIFIED="1511214938845" TEXT="delivered to the same process that caused the signal">
+<node COLOR="#111111" CREATED="1511214943376" ID="ID_413041785" MODIFIED="1511214948369" TEXT="division by zero"/>
+</node>
+</node>
+<node COLOR="#990000" CREATED="1511178071321" ID="ID_1501428488" MODIFIED="1511178093627" TEXT="Async Signal">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1511214951440" ID="ID_1637024715" MODIFIED="1511214958430" TEXT="generated by external process">
+<node COLOR="#111111" CREATED="1511214961279" ID="ID_768789309" MODIFIED="1511214965339" TEXT="timer expiration"/>
+</node>
+</node>
+<node COLOR="#990000" CREATED="1511178079683" ID="ID_63752328" MODIFIED="1511178089884" TEXT="Signal Handlers">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1511214996138" ID="ID_1407618140" MODIFIED="1511215035235" TEXT="default signal handler is run by the kernel"/>
+<node COLOR="#111111" CREATED="1511215015872" ID="ID_542397197" MODIFIED="1511215032884" TEXT="user defined signal handler overrides the default"/>
+</node>
+<node COLOR="#990000" CREATED="1511178132817" ID="ID_1486533555" MODIFIED="1511178138013" TEXT="Delivering a signal">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1511215047533" ID="ID_1400323673" MODIFIED="1511215055163" TEXT="to the thread that the signal applies"/>
+<node COLOR="#111111" CREATED="1511215058148" ID="ID_936069197" MODIFIED="1511215065910" TEXT="to every thread in the process"/>
+<node COLOR="#111111" CREATED="1511215067981" ID="ID_900313459" MODIFIED="1511215075537" TEXT="to certain threads in the process"/>
+<node COLOR="#111111" CREATED="1511215079371" ID="ID_513735157" MODIFIED="1511215098932" TEXT="assign a specific thread to receive all signals to the process"/>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1511178163457" ID="ID_1044440184" MODIFIED="1511215467910" TEXT="Scheduler activation">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<icon BUILTIN="messagebox_warning"/>
+<node COLOR="#990000" CREATED="1511215165910" ID="ID_913430162" MODIFIED="1511215189834" TEXT="communication between thread libraries and kernel">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1511215190528" ID="ID_1260678763" MODIFIED="1511215197125" TEXT="two level"/>
+<node COLOR="#111111" CREATED="1511215197399" ID="ID_343089942" MODIFIED="1511215204856" TEXT="many to many model"/>
+</node>
+<node COLOR="#990000" CREATED="1511215210234" ID="ID_1401477415" MODIFIED="1511215232234" TEXT="LWP(LightWeight Process)">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1511215247435" ID="ID_1971613485" MODIFIED="1511215258180" TEXT="an intermediate data structure between user and kernel threads"/>
+<node COLOR="#111111" CREATED="1511215269064" ID="ID_1754582009" MODIFIED="1511215289989" TEXT="similar to a virtual processor to the user thread library"/>
+<node COLOR="#111111" CREATED="1511215294659" ID="ID_1938191128" MODIFIED="1511215305195" TEXT="each LWP is attached to a kernel thread"/>
+<node COLOR="#111111" CREATED="1511215308409" ID="ID_1358852995" MODIFIED="1511215317996" TEXT="if kernel thread blocks, LWP blocks too"/>
+</node>
+<node COLOR="#990000" CREATED="1511215347175" ID="ID_1636092551" MODIFIED="1511215352073" TEXT="Number of LWPs">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1511215367171" ID="ID_1240993437" MODIFIED="1511215411650" TEXT="a CPU bound application running on a single processor">
+<node COLOR="#111111" CREATED="1511215414992" ID="ID_676528820" MODIFIED="1511215426710" TEXT="only one thread can run, so one LWP is enough"/>
+</node>
+<node COLOR="#111111" CREATED="1511215434508" ID="ID_447800429" MODIFIED="1511215439073" TEXT="I/O bound application">
+<node COLOR="#111111" CREATED="1511215440542" ID="ID_1286920766" MODIFIED="1511215461090" TEXT="one LWP for each concurrent blocking system call"/>
+</node>
+</node>
+<node COLOR="#990000" CREATED="1511215360441" ID="ID_1460484304" MODIFIED="1511215365474" TEXT="How it Works">
+<font NAME="SansSerif" SIZE="14"/>
+<node COLOR="#111111" CREATED="1511215483575" ID="ID_673515721" MODIFIED="1511215498577" TEXT="kernel informs an application about events through upcalls"/>
+<node COLOR="#111111" CREATED="1511215498885" ID="ID_371779315" MODIFIED="1511215526534" TEXT="upcalls handled by thread library with upcall handler(run on virtual processor)"/>
+<node COLOR="#111111" CREATED="1511215538219" ID="ID_281875087" MODIFIED="1511215609631" TEXT="when a thread is about to block, the kernel makes an upcall and allocates a new virtual processor to the application"/>
+<node COLOR="#111111" CREATED="1511215658402" ID="ID_1244544592" MODIFIED="1511215695847" TEXT="the application runs upcall handler on this new virtual processor that saves the state of the blocking thread"/>
+<node COLOR="#111111" CREATED="1511215702298" ID="ID_956400707" MODIFIED="1511215723090" TEXT="the upcall handler schedules another thread on the new virtual processor"/>
 </node>
 </node>
 </node>
