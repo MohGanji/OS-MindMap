@@ -1,4 +1,4 @@
-# OS-MindMap
+#OS-MindMap
 My mind map for OS course
 
 ## Chapter 1
@@ -6,4 +6,7 @@ My mind map for OS course
 
 ## Chapter 2
 ![Chapter 2](./Chapter2.png)
+
+## Chapter 3
+![Chapter 3](./Chapter3.png)
 
